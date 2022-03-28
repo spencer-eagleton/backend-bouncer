@@ -64,7 +64,7 @@ describe('lazy-bouncer routes', () => {
     const res = await request(app).get('/api/v1/users');
 
     expect(res.body).toEqual({
-      message: 'You must be signed in to continue',
+      message: 'must log in to continue',
       status: 401,
     });
   });
@@ -74,7 +74,7 @@ describe('lazy-bouncer routes', () => {
     const res = await agent.get('/api/v1/users');
 
     expect(res.body).toEqual({
-      message: 'You do not have access to view this page',
+      message: 'you are not allowed in',
       status: 403,
     });
   });
