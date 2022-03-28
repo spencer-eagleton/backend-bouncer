@@ -64,7 +64,7 @@ describe('lazy-bouncer routes', () => {
     const res = await request(app).get('/api/v1/users');
 
     expect(res.body).toEqual({
-      message: 'must log in to continue',
+      message: 'must log in to continue!',
       status: 401,
     });
   });
